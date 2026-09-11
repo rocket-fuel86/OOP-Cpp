@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="CW1/CW1.vcxproj" Id="2c35f54d-1d50-4fa6-adfa-ed31f3eaae72" />
+  <Project Path="CW2/CW2.vcxproj" Id="a4f59b79-e000-4db6-9ca9-74caf6b0f79d" />
+  <Project Path="CW2_2/CW2_2.vcxproj" Id="332fc1dd-c81d-4230-9b6c-ebb1803c0e29" />
+  <Project Path="CW2_3/CW2_3.vcxproj" Id="f788250c-43ff-46f2-87e8-bdf86844737a" />
+</Solution>
