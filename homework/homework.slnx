@@ -3,7 +3,8 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="HW1/HW1.vcxproj" Id="8af3b2bc-00c3-4cb7-8299-20bd981e6c46" />
-  <Project Path="HW2/HW2.vcxproj" Id="34f0119e-3744-4cb9-b730-3c61b152da12" />
-  <Project Path="HW3/HW3.vcxproj" Id="026cce26-8851-45b4-80b3-44f3bda987d5" />
+  <Project Path="../../../../../../../../MyFolder/College/OOP/homework/HW1/HW1.vcxproj" Id="8af3b2bc-00c3-4cb7-8299-20bd981e6c46" />
+  <Project Path="../../../../../../../../MyFolder/College/OOP/homework/HW2/HW2.vcxproj" Id="34f0119e-3744-4cb9-b730-3c61b152da12" />
+  <Project Path="../../../../../../../../MyFolder/College/OOP/homework/HW3/HW3.vcxproj" Id="026cce26-8851-45b4-80b3-44f3bda987d5" />
+  <Project Path="../../../../../../../../MyFolder/College/OOP/homework/HW4/HW4.vcxproj" Id="9d9b3366-ecaf-4c54-a402-1af41434824d" />
 </Solution>
