@@ -17,6 +17,7 @@ public:
 	Reservoir(string name, double width, double length, double maxDepth);
 
 	double volumeOfWater();
+	void Compare(Reservoir rhs);
 
 	void setName(string name);
 	void setWidth(double width);

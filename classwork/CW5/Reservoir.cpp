@@ -25,6 +25,23 @@ double Reservoir::volumeOfWater()
 	return _width * _length * _maxDepth;
 }
 
+void Reservoir::Compare(Reservoir rhs)
+{
+	double squareLhs = _width * _length;
+	double squareRhs = rhs.getWidth() * rhs.getLength();
+
+	if (squareLhs > squareRhs)
+	{
+		cout << "Reservoir: " << _name << " is bigger than Reservoir: " << rhs.getName() << endl;
+	} else if (squareLhs < squareRhs)
+	{
+		cout << "Reservoir: " << rhs.getName() << " is bigger than Reservoir: " << _name << endl;
+	}
+	else {
+		cout << "Reservoirs are identical" << endl;
+	}
+}
+
 void Reservoir::setName(string name)
 {
 	_name = name;
