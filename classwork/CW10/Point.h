@@ -22,6 +22,6 @@ public:
     int GetX() const;
     int GetY() const;
 
-    //Point operator + (Point& obj2);
-    //Point operator +(int a);
+    //Point operator+(Point& obj2);
+    //Point operator+(int a);
 };
