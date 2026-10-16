@@ -44,21 +44,21 @@ void Student::setYear(short year)
 	this->year = year;
 }
 
-void Student::input()
-{
-	cout << "Enter name: ";
-	getline(cin >> ws, name);
-
-	cout << "Enter age: ";
-	cin >> age;
-
-	cout << "Enter year: ";
-	cin >> year;
-}
-
-void Student::print() const
-{
-	cout << "Name: " << name << endl
-		<< "Age: " << age << endl
-		<< "Year: " << year << endl;
-}
+//void Student::input()
+//{
+//	cout << "Enter name: ";
+//	getline(cin >> ws, name);
+//
+//	cout << "Enter age: ";
+//	cin >> age;
+//
+//	cout << "Enter year: ";
+//	cin >> year;
+//}
+//
+//void Student::print() const
+//{
+//	cout << "Name: " << name << endl
+//		<< "Age: " << age << endl
+//		<< "Year: " << year << endl;
+//}

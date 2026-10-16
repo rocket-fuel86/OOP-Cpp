@@ -9,6 +9,9 @@ class Student
 	string name;
 	short age;
 	short year;
+
+	friend ostream& operator<<(ostream& out, Student& obj);
+	friend istream& operator>>(istream& in, Student& obj);
 public:
 	Student();
 	Student(string name, short age, short year);
@@ -21,6 +24,6 @@ public:
 	void setAge(short age);
 	void setYear(short year);
 
-	void input();
-	void print() const;
+	//void input();
+	//void print() const;
 };

@@ -1,45 +1,27 @@
 #pragma once
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Point
 {
     int x;
     int y;
+
+    //friend Point operator+(int a, Point& b);
+    friend ostream& operator<<(ostream& out, Point& obj);
+    friend istream& operator>>(istream& out, Point& obj);
 public:
-    Point()
-    {
-        cout << "Construct\n";
-        x = y = 0;
-    }
-    Point(int x1, int y1)
-    {
-        x = x1;
-        y = y1;
-    }
-    void Output()
-    {
-        cout << "X: " << x << "\tY: " << y << endl;
-    }
-    void SetX(int a) { x = a; }
-    void SetY(int a) { y = a; }
-    int GetX() { return x; }
-    int GetY() { return y; }
+    Point();
+    Point(int x, int y);
 
-    //Point operator + (Point& obj2) // obj+obj1
-    //{
-    //    Point rez(this->x + obj2.x, this->y + obj2.y);
-    //    return rez;
-    //}
-    //Point operator +(int a) // obj+int
-    //{
-    //    Point s(x + a, y + a);
-    //    //s.x = x + a;
-    //    //s.y = y + a;
-    //    return s;
-    //}
+    void Output() const;
+
+    void SetX(int a);
+    void SetY(int a);
+    int GetX() const;
+    int GetY() const;
+
+    //Point operator + (Point& obj2);
+    //Point operator +(int a);
 };
-
-
-

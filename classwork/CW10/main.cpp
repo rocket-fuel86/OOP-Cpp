@@ -22,6 +22,25 @@ static Student& operator-=(Student& obj, short a) // obj -= a
     obj.setAge(obj.getAge() - a);
     return obj;
 }
+static ostream& operator<<(ostream& out, Student& obj)
+{
+    out << "Name: " << obj.name << endl
+        << "Age: " << obj.age << endl
+        << "Year: " << obj.year;
+    return out;
+}
+static istream& operator>>(istream& in, Student& obj)
+{
+    cout << "Name: ";
+    getline(cin >> ws, obj.name);
+
+    cout << "Age: ";
+    cin >> obj.age;
+
+    cout << "Year: ";
+    cin >> obj.year;
+    return in;
+}
 
 
 static Point operator+(int a, Point& b) // 10 + obj
@@ -47,7 +66,7 @@ static int operator/(int a, Point& b) // 10 / obj1
 {
     return a / b.GetX() / b.GetY();
 }
-static Point& operator++(Point&obj) // ++obj
+static Point& operator++(Point& obj) // ++obj
 {
     obj.SetX(obj.GetX() + 10);
     obj.SetY(obj.GetY() + 10);
@@ -60,45 +79,54 @@ static Point operator++(Point& obj, int) // obj++
     obj.SetY(obj.GetY() + 10);
     return temp;
 }
+static ostream& operator<<(ostream& out, Point& obj)
+{
+    out << "X: " << obj.x << "\tY: " << obj.y;
+    return out;
+}
+static istream& operator>>(istream& in, Point& obj)
+{
+    cout << "X: ";
+    in >> obj.x;
+    cout << "Y: ";
+    in >> obj.y;
+    return in;
+}
 
 int main()
 {
     Student obj1;
 
-    obj1.input();
-
-    cout << "\nOriginal student:\n";
-    obj1.print();
+    cin >> obj1;
+    cout << obj1 << endl;
 
     obj1++;
-    cout << "\nAfter obj1++:\n";
-    obj1.print();
+    cout << obj1 << endl;
 
     --obj1;
-    cout << "\nAfter --obj1:\n";
-    obj1.print();
+    cout << obj1 << endl;
 
     obj1 += 2;
-    cout << "\nAfter obj1 += 2:\n";
-    obj1.print();
+    cout << obj1 << endl;
 
     obj1 -= 2;
-    cout << "\nAfter obj1 -= 2:\n";
-    obj1.print();
-
+    cout << obj1 << endl;
 
     //Point obj1(10, 20);
     //Point obj2(1, 2);
 
+    //cout << obj1 << endl;
+    //cin >> obj2;
+
     //Point sum;
-    ////sum = obj1 + 5; // метод, функция
-    ////sum.Output();
-    ////sum = 5 + obj1;
-    ////sum.Output();
-    ////sum = ++obj1;
-    ////sum.Output();
-    ////sum = obj1++;
-    ////sum.Output();
+    //sum = obj1 + 5; // метод, функция
+    //sum.Output();
+    //sum = 5 + obj1;
+    //sum.Output();
+    //sum = ++obj1;
+    //sum.Output();
+    //sum = obj1++;
+    //sum.Output();
 
     //Point min = 2 * obj1;
     //int s = obj1 + obj2;
