@@ -1,5 +1,4 @@
-#ifndef CW11_PAIR_H
-#define CW11_PAIR_H
+#pragma once
 
 #include <iostream>
 using namespace std;
@@ -50,5 +49,3 @@ void Pair<T1, T2>::clear() {
     this->a = 0;
     this->b = 0;
 }
-
-#endif

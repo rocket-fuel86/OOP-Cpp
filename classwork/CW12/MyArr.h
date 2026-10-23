@@ -1,5 +1,4 @@
-#ifndef CW11_MYARR_H
-#define CW11_MYARR_H
+#pragma once
 
 #include<iostream>
 using namespace std;
@@ -51,5 +50,3 @@ MyArray<T>::~MyArray()
 {
 	delete[] arr;
 }
-
-#endif
