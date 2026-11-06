@@ -17,7 +17,14 @@ Bicycle::Bicycle(string model, string color, int year, double price, double spee
 
 void Bicycle::shiftGear(int gear)
 {
-	if (gear <= gearCount && gear >= 0) cout << "Bicycle " << model << " has shifted its gear to " << gear << endl;
+	if (gear <= gearCount && gear >= 0)
+	{
+		cout << "Bicycle " << model << " has shifted its gear to " << gear << endl;
+	}
+	else
+	{
+		cout << "Bicycle " << model << " cannot shift to gear " << gear << " (valid range: 0 - " << gearCount << ")" << endl;
+	}
 }
 
 void Bicycle::ringBell() const

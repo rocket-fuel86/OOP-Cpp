@@ -19,13 +19,13 @@ void Scooter::toggleTrunkBox()
 	
 	hasTrunkBox = !hasTrunkBox;
 
-	if (hasTrunkBox) cout << "Scooter " << model << "now has trunk box";
-	else cout << "Scooter " << model << "doesn`t have trunkbox anymore";
+	if (hasTrunkBox) cout << "Scooter " << model << " now has trunk box" << endl;
+	else cout << "Scooter " << model << " doesn't have trunk box anymore" << endl;
 }
 
 void Scooter::startPedaling() const
 {
-	cout << "Scooter " << model << " has started pendaling" << endl;
+	cout << "Scooter " << model << " has started pedaling" << endl;
 }
 
 void Scooter::init(string model, string color, int year, 

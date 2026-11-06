@@ -2,6 +2,7 @@
 
 Car::Car() : Vehicle()
 {
+	bodyType = "";
 	doorCount = 0;
 	isElectric = false;
 	trunkState = false;
@@ -11,6 +12,7 @@ Car::Car() : Vehicle()
 Car::Car(string model, string color, int year, double price, double speed, int wheels, string bodyType, int doorCount, bool isElectric, bool trunkState, bool acState)
 	: Vehicle(model, color, year, price, speed, wheels)
 {
+	this->bodyType = bodyType;
 	this->doorCount = doorCount;
 	this->isElectric = isElectric;
 	this->trunkState = trunkState;
@@ -19,14 +21,16 @@ Car::Car(string model, string color, int year, double price, double speed, int w
 
 void Car::toggleTrunk()
 {
-	if (trunkState) cout << "Car " << model << "has closed it`s trunk" << endl;
-	else cout << "Car " << model << "has opened it`s trunk" << endl;
+	trunkState = !trunkState;
+	if (trunkState) cout << "Car " << model << " has opened its trunk" << endl;
+	else cout << "Car " << model << " has closed its trunk" << endl;
 }
 
 void Car::toggleAirConditioner()
 {
-	if (acState) cout << "Car " << model << "has turned it`s AC off" << endl;
-	else cout << "Car " << model << "has turned it`s AC on" << endl;
+	acState = !acState;
+	if (acState) cout << "Car " << model << " has turned its AC on" << endl;
+	else cout << "Car " << model << " has turned its AC off" << endl;
 }
 
 void Car::init(string model, string color, int year, double price, 
@@ -38,6 +42,7 @@ void Car::init(string model, string color, int year, double price,
 	this->price = price;
 	this->speed = speed;
 	this->wheels = wheels;
+	this->bodyType = bodyType;
 	this->doorCount = doorCount;
 	this->isElectric = isElectric;
 	this->trunkState = trunkState;
@@ -47,7 +52,9 @@ void Car::init(string model, string color, int year, double price,
 void Car::print() const
 {
 	Vehicle::print();
-	cout << "Door count: " << doorCount << endl
+	cout << "Body type: " << bodyType << endl
+		<< "Door count: " << doorCount << endl
 		<< "Is electric: " << isElectric << endl
-		<< "Trunk state: " << trunkState << endl;
+		<< "Trunk state: " << trunkState << endl
+		<< "AC state: " << acState << endl;
 }

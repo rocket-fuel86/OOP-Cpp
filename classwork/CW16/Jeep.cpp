@@ -19,14 +19,14 @@ void Jeep::toggle4x4()
 {
 	allWheelDrive = !allWheelDrive;
 
-	if (allWheelDrive) cout << "Jeep " << model << "has turned 4x4 mode off";
-	else cout << "Jeep " << model << "has turned 4x4 mode on";
+	if (allWheelDrive) cout << "Jeep " << model << " has turned 4x4 mode on" << endl;
+	else cout << "Jeep " << model << " has turned 4x4 mode off" << endl;
 }
 
 void Jeep::useWinch()
 {
 	if (hasWinch) cout << "Jeep " << model << " has used its winch" << endl;
-	else cout << "Jeep " << model << " doesn`t have winch" << endl;
+	else cout << "Jeep " << model << " doesn't have a winch" << endl;
 }
 
 void Jeep::init(string model, string color, int year, double price, double speed, int wheels, bool allWheelDrive, double groundClearance, bool hasWinch)

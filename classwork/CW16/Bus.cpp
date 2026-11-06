@@ -20,21 +20,50 @@ Bus::Bus(string model, string color, int year, double price,
 
 void Bus::toggleDoors()
 {
+	doorsState = !doorsState;
+	if (doorsState) cout << "Bus " << model << " has opened its doors" << endl;
+	else cout << "Bus " << model << " has closed its doors" << endl;
 }
 
 void Bus::announceStation(string stationName) const
 {
+	cout << "Bus " << model << " has announced " << stationName << " station" << endl;
 }
 
 void Bus::boardPassengers(int count)
 {
+	if (count <= 0) return;
+
+	if (currentPassengersCount + count <= passengerCapacity)
+	{
+		currentPassengersCount += count;
+		cout << "Bus " << model << " has boarded " << count << " passengers. Total passengers: " << currentPassengersCount << " / " << passengerCapacity << endl;
+	}
+	else
+	{
+		cout << "Bus " << model << " cannot board " << count << " passengers (exceeds capacity of " << passengerCapacity << ")" << endl;
+	}
 }
 
-void Bus::init(string model, string color, int year, double price, double speed, int wheels, int passengerCapacity, int currentPassengersCount, bool isRouteActive)
+void Bus::init(string model, string color, int year, double price, double speed, int wheels, int passengerCapacity, int currentPassengersCount, bool isRouteActive, bool doorsState)
 {
+	this->model = model;
+	this->color = color;
+	this->year = year;
+	this->price = price;
+	this->speed = speed;
+	this->wheels = wheels;
+	this->passengerCapacity = passengerCapacity;
+	this->currentPassengersCount = currentPassengersCount;
+	this->isRouteActive = isRouteActive;
+	this->doorsState = doorsState;
 }
 
 void Bus::print() const
 {
 	Vehicle::print();
+	cout << "Passenger capacity: " << passengerCapacity << endl
+		<< "Current passengers count: " << currentPassengersCount << endl
+		<< "Is route active: " << isRouteActive << endl
+		<< "Doors state: " << doorsState << endl;
 }
