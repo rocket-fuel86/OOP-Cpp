@@ -15,3 +15,11 @@ void Animal::Print() const
     cout << "Color: " << color << endl;
     cout << "Food: " << food << endl;
 }
+
+void Animal::Init()
+{
+    species = "";
+    weight = 0;
+    color = "";
+    food = "";
+}

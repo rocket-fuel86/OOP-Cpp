@@ -1,0 +1,19 @@
+#pragma once
+
+#include "Vehicle.h"
+
+class Scooter : public Vehicle
+{
+	double engineVolume;
+	bool hasTrunkBox;
+public:
+	Scooter();
+	Scooter(string model, string color, int year, double price,
+		double speed, int wheels, double engineVolume, bool hasTrunkBox);
+	void toggleTrunkBox();
+	void startPedaling() const;
+	void init(string model, string color, int year, double price, 
+		double speed, int wheels, double engineVolume, bool hasTrunkBox);
+	void print() const;
+};
+

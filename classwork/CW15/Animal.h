@@ -14,4 +14,5 @@ protected:
 public:
     Animal(string sp, double wg, string col, string fd);
     void Print() const;
+    void Init();
 };

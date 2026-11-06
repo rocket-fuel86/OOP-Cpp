@@ -10,4 +10,5 @@ class Parrot : public Animal // Parrot - наследник, производн�
 public:
     Parrot(string sp, double wg, string col, string fd, string nm, bool talk, double wing);
     void Print() const; // переопределение метода Print.
+    void Init(string sp, double wg, string col, string fd, string nm, bool talk, double wing);
 };
