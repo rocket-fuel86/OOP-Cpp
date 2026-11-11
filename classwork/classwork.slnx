@@ -12,6 +12,11 @@
   <Project Path="CW14/CW14.vcxproj" Id="3bd684e8-4d06-42ea-9979-a6a2fd3c8c89" />
   <Project Path="CW15/CW15.vcxproj" Id="aa4895f3-694c-457c-8ded-30bd3eaf90cb" />
   <Project Path="CW16/CW16.vcxproj" Id="f282aae7-f198-4718-8ad6-0d57a29f24b9" />
+  <Project Path="CW17/CW17.vcxproj" Id="17caada5-811f-4667-b904-a2954fbaf534" />
+  <Project Path="CW17_1/CW17_1.vcxproj" Id="656a857a-90dd-4c88-a5c8-34e6aefc6bfe" />
+  <Project Path="CW17_2/CW17_2.vcxproj" Id="9b514dab-8093-4f35-a891-0e7c3355e7f4" />
+  <Project Path="CW17_3/CW17_3.vcxproj" Id="207fbc44-f0d1-4416-aaec-6222063892f5" />
+  <Project Path="CW17_4/CW17_4.vcxproj" Id="606cb6f6-e7ef-4e49-9076-21f2e1485fac" />
   <Project Path="CW2/CW2.vcxproj" Id="a4f59b79-e000-4db6-9ca9-74caf6b0f79d" />
   <Project Path="CW2_2/CW2_2.vcxproj" Id="332fc1dd-c81d-4230-9b6c-ebb1803c0e29" />
   <Project Path="CW2_3/CW2_3.vcxproj" Id="f788250c-43ff-46f2-87e8-bdf86844737a" />
