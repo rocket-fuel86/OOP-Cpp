@@ -52,3 +52,23 @@ void Bicycle::print() const
 		<< "Gear count: " << gearCount << endl
 		<< "Has suspension: " << hasSuspension << endl;
 }
+
+void Bicycle::showMaxSpeed() const
+{
+	cout << "Bicycle max speed is 82 km/h" << endl;
+}
+
+void Bicycle::countFuelConsumption() const
+{
+	cout << "Bicycles don`t consume fuel" << endl;
+}
+
+void Bicycle::showWheelsCount() const
+{
+	cout << "Bicycles have only 2 wheels" << endl;
+}
+
+void Bicycle::showPassengersCount() const
+{
+	cout << "Bicycles can have up to 2 passengers" << endl;
+}

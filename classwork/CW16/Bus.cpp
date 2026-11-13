@@ -67,3 +67,23 @@ void Bus::print() const
 		<< "Is route active: " << isRouteActive << endl
 		<< "Doors state: " << doorsState << endl;
 }
+
+void Bus::showMaxSpeed() const
+{
+	cout << "Bus max speed is 125 km/h" << endl;
+}
+
+void Bus::countFuelConsumption() const
+{
+	cout << "Bus fuel consumption: " << (8 * speed) / 100 << " l" << endl;
+}
+
+void Bus::showWheelsCount() const
+{
+	cout << "Buses have only 4 wheels" << endl;
+}
+
+void Bus::showPassengersCount() const
+{
+	cout << "Bus " << model << " current passengers: " << currentPassengersCount << endl;
+}

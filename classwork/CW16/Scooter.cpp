@@ -47,3 +47,23 @@ void Scooter::print() const
 	cout << "Engine volume: " << engineVolume << endl
 		<< "Has trunk box: " << hasTrunkBox << endl;
 }
+
+void Scooter::showMaxSpeed() const
+{
+	cout << "Scooter max speed is 55 km/h" << endl;
+}
+
+void Scooter::countFuelConsumption() const
+{
+	cout << "Scooter fuel consumption: " << (3 * speed) / 100 << " l" << endl;
+}
+
+void Scooter::showWheelsCount() const
+{
+	cout << "Scooter " << model << " wheels count " << wheels << endl;
+}
+
+void Scooter::showPassengersCount() const
+{
+	cout << "Scooters can have up to 2 passengers" << endl;
+}

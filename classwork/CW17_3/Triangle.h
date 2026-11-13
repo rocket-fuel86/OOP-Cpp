@@ -6,6 +6,6 @@ class Triangle :
     public Figure
 {
 public:
-
     virtual void ShowArea() const;
+    void Perimetr() const;
 };

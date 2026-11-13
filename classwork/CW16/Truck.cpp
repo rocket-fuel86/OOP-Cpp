@@ -88,3 +88,23 @@ void Truck::print() const
 		<< "Current cargo weight: " << currentCargoWeight << endl
 		<< "Has trailer: " << hasTrailer << endl;
 }
+
+void Truck::showMaxSpeed() const
+{
+	cout << "Truck max speed is 90 km/h" << endl;
+}
+
+void Truck::countFuelConsumption() const
+{
+	cout << "Truck fuel consumption: " << (12 * speed) / 100 << " l" << endl;
+}
+
+void Truck::showWheelsCount() const
+{
+	cout << "Truck have only 4 wheels" << endl;
+}
+
+void Truck::showPassengersCount() const
+{
+	cout << "Truck can have up to 3 passengers" << endl;
+}

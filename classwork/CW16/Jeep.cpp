@@ -49,3 +49,23 @@ void Jeep::print() const
 	cout << "Ground clearance: " << groundClearance << endl;
 	cout << "Has winch: " << hasWinch << endl;
 }
+
+void Jeep::showMaxSpeed() const
+{
+	cout << "Jeep max speed is 200 km/h" << endl;
+}
+
+void Jeep::countFuelConsumption() const
+{
+	cout << "Jeep fuel consumption: " << (7 * speed) / 100 << " l" << endl;
+}
+
+void Jeep::showWheelsCount() const
+{
+	cout << "Jeeps have only 4 wheels" << endl;
+}
+
+void Jeep::showPassengersCount() const
+{
+	cout << "Jeeps can have up to 6 passengers" << endl;
+}

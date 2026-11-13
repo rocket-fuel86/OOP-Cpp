@@ -6,9 +6,14 @@
 
 using namespace std;
 
-void Show(const Figure& figure)
+static void Show(const Figure& figure)
 {
     figure.ShowArea();
+}
+
+static void Perimetr(const Figure& figure)
+{
+    figure.Perimetr();
 }
 
 int main()
@@ -29,6 +34,7 @@ int main()
                 Circle circle;
                 circle.SetDimension(10.0);
                 Show(circle);
+                Perimetr(circle);
             }
             break;
         case 2: 
@@ -36,6 +42,7 @@ int main()
                 Rectangle rectangle;
                 rectangle.SetDimension(5.5, 10.0);
                 Show(rectangle);
+                Perimetr(rectangle);
             }
             break;
         case 3: 
@@ -43,6 +50,7 @@ int main()
                 Triangle triangle;
                 triangle.SetDimension(5.5, 10.0);
                 Show(triangle);
+                Perimetr(triangle);
             }
             break;
     }

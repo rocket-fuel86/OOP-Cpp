@@ -13,4 +13,5 @@ public:
     void SetDimension(const double value1, const double value2);
 
     virtual void ShowArea() const;
+    virtual void Perimetr() const = 0;
 };

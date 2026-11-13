@@ -8,73 +8,49 @@
 
 int main()
 {
-	Vehicle vehicle("Base Model X", "Silver", 2020, 15000.0, 0.0, 4);
-	vehicle.print();
-	vehicle.start();
-	vehicle.accelerate(50.0);
-	vehicle.turn("left");
-	vehicle.turn("up");
-	vehicle.slowDown(20.0);
-	vehicle.slowDown(40.0);
-	vehicle.stop();
+	Vehicle* vehicle = nullptr;
 
-	// 2. Car
-	Car car("Audi A6", "Black", 2022, 55000.0, 0.0, 4, "Sedan", 4, false, false, false);
-	car.print();
-	car.start();
-	car.accelerate(90.0);
-	car.toggleAirConditioner();
-	car.toggleTrunk();
-	car.toggleTrunk();
-	car.stop();
+	int choice = 0;
 
-	// 3. Bus
-	Bus bus("MAN Lion's City", "Yellow", 2021, 220000.0, 0.0, 6, 60, 50, true, false);
-	bus.print();
-	bus.announceStation("Main Railway Station");
-	bus.toggleDoors();
-	bus.boardPassengers(8);
-	bus.boardPassengers(5);
-	bus.toggleDoors();
+	cout << "1. Car" << endl;
+	cout << "2. Bus" << endl;
+	cout << "3. Bicycle" << endl;
+	cout << "4. Jeep" << endl;
+	cout << "5. Scooter" << endl;
+	cout << "6. Truck" << endl;
 
-	// 4. Bicycle
-	Bicycle bicycle("Trek Dual Sport", "Orange", 2023, 850.0, 0.0, 2, "Hybrid", 18, true);
-	bicycle.print();
-	bicycle.ringBell();
-	bicycle.shiftGear(7);
-	bicycle.shiftGear(25);
+	cin >> choice;
 
-	// 5. Jeep
-	Jeep jeep("Jeep Wrangler", "Army Green", 2022, 60000.0, 0.0, 4, false, 25.0, true);
-	jeep.print();
-	jeep.toggle4x4();
-	jeep.toggle4x4();
-	jeep.useWinch();
+	switch (choice)
+	{
+	case 1:
+		vehicle = new Car();
+		break;
+	case 2:
+		vehicle = new Bus();
+		break;
+	case 3:
+		vehicle = new Bicycle();
+		break;
+	case 4:
+		vehicle = new Jeep();
+		break;
+	case 5:
+		vehicle = new Scooter();
+		break;
+	case 6:
+		vehicle = new Truck();
+		break;
+	default:
+		break;
+	}
 
-	// 6. Scooter
-	Scooter scooter("Yamaha NMAX", "Blue", 2022, 3800.0, 0.0, 2, 155.0, false);
-	scooter.print();
-	scooter.toggleTrunkBox();
-	scooter.startPedaling();
-
-	// 7. Truck
-	Truck truck("Scania R500", "Red", 2023, 140000.0, 0.0, 6, 20000.0, 0.0, false);
-	truck.print();
-	truck.start();
-	truck.accelerate(70.0);
-	truck.loadCargo(12000.0);
-	truck.loadCargo(10000.0);
-	truck.toggleTrailer(); 
-	truck.unloadCargo(4000.0);
-	truck.unloadCargo(10000.0);
-	truck.slowDown(30.0);
-	truck.stop();
-	truck.toggleTrailer();
-
-	// 8. Testing default constructor & init()
-	Truck defaultTruck;
-	defaultTruck.init("Volvo FH", "White", 2024, 150000.0, 0.0, 8, 30000.0, 5000.0, true);
-	defaultTruck.print();
-
-	return 0;
+	if (vehicle != nullptr) 
+	{ 
+		vehicle->print();
+		vehicle->showMaxSpeed();
+		vehicle->countFuelConsumption();
+		vehicle->showWheelsCount();
+		vehicle->showPassengersCount();
+	};
 }

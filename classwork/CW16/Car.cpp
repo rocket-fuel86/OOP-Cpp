@@ -58,3 +58,23 @@ void Car::print() const
 		<< "Trunk state: " << trunkState << endl
 		<< "AC state: " << acState << endl;
 }
+
+void Car::showMaxSpeed() const
+{
+	cout << "Car max speed is 240 km/h" << endl;
+}
+
+void Car::countFuelConsumption() const
+{
+	cout << "Car fuel consumption: " << (6 * speed) / 100 << " l" << endl;
+}
+
+void Car::showWheelsCount() const
+{
+	cout << "Cars have only 4 wheels" << endl;
+}
+
+void Car::showPassengersCount() const
+{
+	cout << "Cars can have up to 4 passengers" << endl;
+}
